@@ -3,3 +3,5 @@ langchain
 langchain-openai
 langchain_community
 faiss-cpu
+langchain-core
+python-dotenv
