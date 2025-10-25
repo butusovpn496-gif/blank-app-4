@@ -90,11 +90,11 @@ result = ""
 
 with st.form(key='qa_form', clear_on_submit=True, border=True):
     query_text = st.text_input(
-    'Введите вопрос к системе:',
-    placeholder='Здесь нужно написать вопрос.',
+    'Отправьте свой вопрос LLM:',
+    placeholder='Здесь нужно написать вопрос',
     # disabled=not uploaded_file
 )
-    submitted = st.form_submit_button("Подтвердить")
+    submitted = st.form_submit_button("Отправить")
 
     if submitted:
         with st.spinner('Calculating...'):
