@@ -86,7 +86,7 @@ def generate_response(question):
 
     return response
 
-
+result = ""
 
 with st.form(key='qa_form', clear_on_submit=True, border=True):
     query_text = st.text_input(
