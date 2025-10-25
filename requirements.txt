@@ -6,3 +6,6 @@ faiss-cpu
 langchain-core
 python-dotenv
 pymupdf
+pypdf
+pdf2image
+pillow
