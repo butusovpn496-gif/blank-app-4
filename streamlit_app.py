@@ -1,31 +1,31 @@
 import streamlit as st
 
-# from langchain_gigachat.embeddings.gigachat import GigaChatEmbeddings
+from langchain_gigachat.embeddings.gigachat import GigaChatEmbeddings
 
-# auth = "YjAzMmQ0ZmItZDUwYi00MTY1LWE4ZGEtYmJkODRlMzczMDZiOmEyNjdhOTJkLWE0MGYtNGZmMi1iZDZlLTJmOTY2NWIwMzNiYg=="
-# embeddings = GigaChatEmbeddings(
-#     credentials=auth,
-#     verify_ssl_certs=False
-# )
+auth = st.secrets["gigachat_api_key"]
+embeddings = GigaChatEmbeddings(
+    credentials=auth,
+    verify_ssl_certs=False
+)
 
-# from langchain_gigachat import GigaChat
+from langchain_gigachat import GigaChat
 
-# llm = GigaChat(
-#             credentials=auth,
-#             model='GigaChat',
-#             verify_ssl_certs=False,
-#             profanity_check=False
-#             )
+llm = GigaChat(
+            credentials=auth,
+            model='GigaChat',
+            verify_ssl_certs=False,
+            profanity_check=False
+            )
 
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+# from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
-api_key = st.secrets["openai_api_key"]
+# api_key = st.secrets["openai_api_key"]
 
 # Инициализируем языковую модель OpenAI
-llm = ChatOpenAI(model="gpt-5-nano", openai_api_key=api_key)
+# llm = ChatOpenAI(model="gpt-5-nano", openai_api_key=api_key)
 
 # Создаём эмбеддинги для текста
-embeddings = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=api_key)
+# embeddings = OpenAIEmbeddings(model="text-embedding-3-small", openai_api_key=api_key)
 
 import faiss
 from langchain_community.docstore.in_memory import InMemoryDocstore
