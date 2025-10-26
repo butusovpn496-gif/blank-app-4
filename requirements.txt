@@ -6,4 +6,3 @@ faiss-cpu
 langchain-core
 python-dotenv
 pymupdf
-pypdf
